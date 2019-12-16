@@ -33,10 +33,24 @@ var sum = function(array) {
 // 3. Sum all numbers in an array containing nested arrays.
 // arraySum([1,[2,3],[[4]],5]); // 15
 var arraySum = function(array) {
+	if (array.length === 0) {
+		return 0;
+	} else if (array.length === 1) {
+		return array[0];
+	} 
+
+	return array[0] + arraySum(array.slice(1));
 };
 
 // 4. Check if a number is even.
 var isEven = function(n) {
+	if (Math.abs(n) - 1 === 0) {
+		return false;
+	} else if (Math.abs(n) === 0) {
+		return true;
+	}
+
+	return isEven(Math.abs(n) - 2);
 };
 
 // 5. Sum all integers below a given integer.
