@@ -299,6 +299,26 @@ var multiply = function(x, y) {
 // 13. Write a function that divides two numbers without using the / operator or
 // Math methods to arrive at an approximate quotient (ignore decimal endings).
 var divide = function(x, y) {
+	if (y === 0) {
+
+		return NaN;
+
+	} else {
+
+		var quotient = 0;
+
+		/*if (x >= 0 && y > 0) {
+			
+		} else if (x >= 0 && y < 0) {
+	
+		} else if (x <= 0 && y > 0) {
+	
+		} else if (x <= 0 && y < 0) {
+			
+		}*/
+
+		return quotient;
+	}
 };
 
 // 14. Find the greatest common divisor (gcd) of two positive numbers. The GCD of two
@@ -314,6 +334,25 @@ var gcd = function(x, y) {
 // compareStr('house', 'houses') // false
 // compareStr('tomato', 'tomato') // true
 var compareStr = function(str1, str2) {
+
+	if (str1.charAt(0) !== str2.charAt(0)) {
+
+		return false;
+
+	} else if (str1.length > 1 && str2.length > 1) {
+
+		return compareStr(str1.slice(1), str2.slice(1));
+
+	} else if (str1.length !== str2.length) {
+
+		return false;
+
+	} else {
+
+		return true;
+
+	}
+
 };
 
 // 16. Write a function that accepts a string and creates an array where each letter
